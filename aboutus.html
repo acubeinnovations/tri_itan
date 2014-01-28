@@ -1,0 +1,83 @@
+<!doctype html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="author" content="Made with ❤ by Jorge Epuñan - @csslab">
+	
+	<title>i-tan</title>
+	<link rel="stylesheet" href="css/aboutus.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/sbimenu.css" />
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.timelinr-0.9.54.js"></script>
+		<script type="text/javascript" src="js/jquery.bgImageMenu.js"></script>
+	<script>
+		$(function(){
+			$().timelinr({
+				arrowKeys: 'true'
+			})
+		});
+	</script>
+</head>
+
+<body>
+	
+<p>&nbsp;</p>
+<div id="arrow_bg"><a href="#" id="next">+</a> <a href="#" name="prev" id="prev">-</a> </div>
+<div id="timeline">
+		<ul id="dates">
+			<li><a href="#1900">About&nbsp;us</a></li>
+			<li><a href="#1930">-Legacy</a></li>
+			<li><a href="#1944">-Our story</a></li>
+			<li><a href="#1950">-Our team</a></li>
+		</ul>
+  <ul id="issues">
+			<li id="001">&nbsp;</li>
+	 		<li id="002">&nbsp;</li>
+			<li id="003">&nbsp;</li>
+	 		<li id="004">&nbsp;</li>
+  </ul>
+		
+        
+        
+        
+</div>
+
+<div class="content">
+               <div id="logo"><a href="index.htm"><img src="img/logo.jpg" width="150" height="150" border="0"></a></div>
+  <div id="sbi_container">
+			    <div class="sbi_panel">
+						<a href="index.html" class="sbi_label">HOME</a>	
+						<div class="sbi_content">
+							<ul>
+								<li><a href="#">Sub&nbsp;Item1</a></li>
+								<li><a href="#">Sub&nbsp;Item2</a></li>
+								<li><a href="#">Sub&nbsp;Item3</a></li>
+							</ul>
+						</div>				
+				</div>
+
+                    <div class="sbi_panel">
+						<a href="creativity.html" class="sbi_label">OUR&nbsp;CREATIVITY</a>
+                    </div>
+                    
+                    <div class="sbi_panel">
+						<a href="products.html" class="sbi_label">OUR&nbsp;PRODUCTS</a>
+                    </div>
+                    
+                    <div class="sbi_panel">
+						<a href="contactus.html" class="sbi_label">CONTACT&nbsp;US</a>
+                    </div>
+  </div>
+</div>
+<div id="copy-right_bg">
+	<div id="copy-right">© Copyright 2013 Itan Jewels DMCC. All rights reserved.</div>
+</div>
+		<script type="text/javascript">
+			$(function() {
+				$('#sbi_container').bgImageMenu();
+			});
+		</script>
+
+
+</body>
+</html>

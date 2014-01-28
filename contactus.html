@@ -1,0 +1,197 @@
+<!doctype html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="author" content="">
+	
+	<title>ITAN JEWELS - CONTACT US</title>
+
+	<link rel="stylesheet" type="text/css" href="css/sbimenu.css" />
+    <link rel="stylesheet" href="css/contactus.css" media="screen" />
+    
+           	
+	<script src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.bgImageMenu.js"></script>
+	<script>
+
+	$(document).ready(function(){
+
+		$('#submit').click(function () {
+
+		function Trim(strInput) {
+			while (true) {
+				if (strInput.substring(0, 1) != " ")
+				    break;
+				strInput = strInput.substring(1, strInput.length);
+			}
+			while (true) {
+				if (strInput.substring(strInput.length - 1, strInput.length) != " ")
+				    break;
+				strInput = strInput.substring(0, strInput.length - 1);
+			}
+		   return strInput;
+		}
+
+		var error = "";
+		var email = $('#email').val();  
+		if(Trim(email)==""){
+		    error += "Empty email.\n";
+		}else{
+			
+			pattern = /^[a-zA-Z0-9]\w+(\.)?\w+@\w+\.\w{2,5}(\.\w{2,5})?$/;
+			result = pattern.test(email);
+			if( result == false) {
+			   error += "Invalid Emailid.\n";
+			}
+		}
+
+		var name = $('#name').val();  
+
+		if(Trim(name)==""){
+		    error += "Empty Name.\n";
+		}
+
+		var company = $('#company').val();  
+		/* if(Trim(company)==""){
+		    error += "Empty Company Name.\n";
+		}
+		*/
+		var message = $('#message').val();  
+		if(Trim(message)==""){
+		    error += "Empty Message.\n";
+		}
+		if(error!=''){
+			alert(error);
+			return false;
+		}else{
+		var submit="SEND MESSAGE";
+		var success_post = $.post('send_mail.php',
+			{	submit:submit,
+				name:name,
+				email:email,
+				company:company,
+				message:message,
+
+			});
+		success_post.done(function(data){
+			if(data=='1'){
+				$("#contact_send").hide();
+				$("#contact_success").show();
+				}
+			});
+			}
+		});
+		
+	});
+
+	</script>
+    
+    <style type="text/css">
+<!--
+#apDiv2 {
+	position:absolute;
+	left:314px;
+	top:62px;
+	width:155px;
+	height:63px;
+	z-index:3;
+}
+#contact_success{
+display:none;
+}
+-->
+    </style>
+</head>
+
+<body>
+	
+    
+        <div id="apDiv1">
+    <div id="contact_box_1">
+    	<br><br>
+        <span id="title1">ITAN JEWELS</span><br>
+        <span id="title2">CONTACT FORM</span><br><br>
+        <hr  class="style-six">
+        <div class="address">Dubai Office<br>
+			333A  Street,<br>
+			Dubai, DC 20007<br>
+			Phone +97 123 4567890
+			</div>
+        <div class="address">Abudabi Office<br>
+			333A  Street,<br>
+			Dubai, DC 20007<br>
+			Phone +97 123 4567890</div>
+    </div>
+	
+    <div id="contact_form">
+		 <div id="contact_success">	
+			<h1>MESSAGE SENT</h1><br>
+			<strong>Thank you for contacting us. We will be in touch soon.<br><br><a href="index.htm" style="text-decoration:none;">Go To Home</strong></a>
+		 </div>
+		 <div id="contact_send">
+			 <table border="0" cellpadding="4" cellspacing="4" align="center">
+			 <tr>
+			 <td>Name</td>
+			 <td><input type="text" name="name" id="name" class="text"></td>
+			 </tr>
+			  <tr>
+			 <td>Company (optional)</td>
+			 <td><input type="text" name="company" id="company" class="text"></td>
+			 </tr>
+			  <tr>
+			 <td>Your email address</td>
+			 <td><input type="text" name="email" id="email" class="text"></td>
+			 </tr>
+			  <tr>
+			 <td valign="top">Message</td>
+			 <td><textarea name="message" id="message" class="textarea"></textarea></td>
+			 </tr>
+			  <tr>
+			 <td>&nbsp;</td>
+			 <td><input type="button"  id="submit" class="sendmsg" value="SEND MESSAGE" ></td>
+			 </tr>
+			 </table>
+		</div>
+    
+    </div>
+    
+    </div>
+
+<div class="content">
+	<div id="logo"><a href="index.html"><img src="img/logo.jpg" width="150" height="150" border="0"></a></div>
+	<div id="sbi_container">
+		<div class="sbi_panel">
+			<a href="index.html" class="sbi_label">HOME</a>
+			<div class="sbi_content">
+				<ul>
+					<li><a href="#">Sub&nbsp;Item1</a></li>
+					<li><a href="#">Sub&nbsp;Item2</a></li>
+					<li><a href="#">Sub&nbsp;Item3</a></li>
+				</ul>
+			</div>						
+		</div>
+		<div class="sbi_panel">
+			<a href="aboutus.html" class="sbi_label">ABOUT&nbsp;US</a>						
+		</div>
+		<div class="sbi_panel">
+			<a href="creativity.html" class="sbi_label">OUR&nbsp;CREATIVITY</a>
+		</div>
+
+		<div class="sbi_panel">
+			<a href="products.html" class="sbi_label">OUR&nbsp;PRODUCTS</a>
+		</div>
+	</div>
+</div>
+
+<div id="copy-right_bg">
+	<div id="copy-right">© Copyright 2013 Itan Jewels DMCC. All rights reserved.</div>
+</div>
+		<script type="text/javascript">
+			$(function() {
+				$('#sbi_container').bgImageMenu();
+			});
+		</script>
+
+
+</body>
+</html>
