@@ -40,11 +40,29 @@ h2 {
 	margin-top: 40px;
 	background-color: #000;
 	color:#FFFFFF;
+	text-decoration:none;
 }
 #dates li a.selected {
     background-color: #fff;
 	color:#000;
     opacity:1;
+	text-decoration:none;
+}
+.slide-img-div{
+margin-left: 30px;
+	margin-top: 40px;
+float:left;
+}
+.slide-content-div{
+padding-left:220px;
+
+margin-left: 180px;
+margin-top: 40px;
+
+color:#000;
+
+text-align:justify;
+position: relative;
 }
 
 #issues {
@@ -132,7 +150,7 @@ h2 {
 #arrow_bg {
 	height: 40px;
 	width: 81px;
-	background-image: url(../img/prev.png);
+	
 	background-repeat: no-repeat;
 	background-position: left top;
 	position: absolute;
