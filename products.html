@@ -107,8 +107,8 @@ setTimeout( sizeScrollbar, 10 );//safari wants a timeout
 <link rel="stylesheet" href="css/idangerous.swiper.css">
 <style>
 
-.swiper-container-outer{width:650px; height:1200px;  display:none; }
-.swiper-container{width:650px; height:1200px; color:#fff;text-align:center; left:25%; position:fixed; z-index:0; bottom:0px; float:left }
+.swiper-container-outer{width:100%; height:1200px; position:fixed; bottom:-415px; z-index:0;  v-align:top; display:none; }
+.swiper-container{width:650px; height:1200px; color:#fff;  z-index:0; margin-top:-260px;  margin-left:auto; margin-right:auto; }
 .swiper-wrapper{width:650px;height:400px;}
 .red-slide{background:#ca4040;}.blue-slide{background:#4390ee;}.orange-slide{background:#ff8604;}.green-slide{background:#49a430;}.pink-slide{background:#973e76;}
 
@@ -186,7 +186,36 @@ setTimeout( sizeScrollbar, 10 );//safari wants a timeout
 .swiper-slide .title{font-style:italic;font-size:42px;margin-top:80px;margin-bottom:0;line-height:45px;}
 .swiper-slide p{font-style:italic;font-size:25px;}.pagination{position:absolute;z-index:20;left:10px;top:10px;}
 .swiper-pagination-switch{display:block;width:8px;height:8px;border-radius:8px;background:#555;margin:0 0px 5px;opacity:0.8;border:1px solid #fff;cursor:pointer;}
-.swiper-active-switch{background:#fff;}</style>
+.swiper-active-switch{background:#fff;}
+
+
+.nav_up, .nav_down
+{
+	position: relative;
+	cursor: pointer;
+	display: block;
+    background: url(img/jssor_arrows.png) no-repeat;
+    overflow:hidden;
+    opacity: .4; filter:alpha(opacity=40);
+	z-index:2000;
+}
+.nav_up { background-position: -5px -35px; }
+.nav_down { background-position: -65px -35px; }
+.nav_up:hover { background-position: -5px -35px; opacity: .8; filter:alpha(opacity=80); }
+.nav_down:hover { background-position: -65px -35px; opacity: .8; filter:alpha(opacity=80); }
+
+
+#swiper_nav_outer{
+	width:100%; height:100px; position:fixed; bottom:243px; z-index:-1;  display:none;
+	  
+}
+#swiper_nav_inner{
+height:100px;width:750px;  margin-left:auto; margin-right:auto;
+}
+#swiper_nav{ 
+height:100px;width:50px; margin-left:700px;
+}
+</style>
 
 
 
@@ -196,22 +225,45 @@ setTimeout( sizeScrollbar, 10 );//safari wants a timeout
 
 
 <div class="swiper-container-outer">
-<div class="swiper-container">
-	<div class="swiper-wrapper ">
 
-		<div class="swiper-slide" id="first-slide">
 
-		</div>
-		<div class="swiper-slide " id="second-slide">
 
-		</div>
-		<div class="swiper-slide " id="third-slide">
+
+
+	<div class="swiper-container">
+		<div class="swiper-wrapper ">
+
+			<div class="swiper-slide" id="first-slide">
+
+			</div>
+			<div class="swiper-slide " id="second-slide">
+
+			</div>
+			<div class="swiper-slide " id="third-slide">
+
+			</div>
 
 		</div>
 
 	</div>
 
-</div>
+
+	<div id="swiper_nav_outer">
+		<div id="swiper_nav_inner">
+			<div id="swiper_nav">
+					</style>
+					<!-- Arrow down -->
+					<span class="nav_up" style="width: 50px; height: 50px; ">
+					</span>
+					<!-- Arrow up -->
+					<span  class="nav_down" style="width: 50px; height: 50px; "></span>
+
+			</div>
+		</div>
+	</div>
+
+
+
 </div>
 
 
@@ -223,29 +275,29 @@ setTimeout( sizeScrollbar, 10 );//safari wants a timeout
 
 <div class="scroll-pane ui-widget  ui-corner-all">
 <div class="scroll-bar-wrap ui-widget-content ui-corner-bottom">
-<div class="scroll-bar"></div>
+	<div class="scroll-bar"></div>
 </div>
 <div class="scroll-content">
-<div class="scroll-content-item ">1</div>
-<div class="scroll-content-item ">2</div>
-<div class="scroll-content-item ">3</div>
-<div class="scroll-content-item ">4</div>
-<div class="scroll-content-item ">5</div>
-<div class="scroll-content-item ">6</div>
-<div class="scroll-content-item ">7</div>
-<div class="scroll-content-item ">8</div>
-<div class="scroll-content-item ">9</div>
-<div class="scroll-content-item ">10</div>
-<div class="scroll-content-item ">11</div>
-<div class="scroll-content-item ">12</div>
-<div class="scroll-content-item ">13</div>
-<div class="scroll-content-item ">14</div>
-<div class="scroll-content-item ">15</div>
-<div class="scroll-content-item ">16</div>
-<div class="scroll-content-item ">17</div>
-<div class="scroll-content-item ">18</div>
-<div class="scroll-content-item ">19</div>
-<div class="scroll-content-item ">20</div>
+	<div class="scroll-content-item ">1</div>
+	<div class="scroll-content-item ">2</div>
+	<div class="scroll-content-item ">3</div>
+	<div class="scroll-content-item ">4</div>
+	<div class="scroll-content-item ">5</div>
+	<div class="scroll-content-item ">6</div>
+	<div class="scroll-content-item ">7</div>
+	<div class="scroll-content-item ">8</div>
+	<div class="scroll-content-item ">9</div>
+	<div class="scroll-content-item ">10</div>
+	<div class="scroll-content-item ">11</div>
+	<div class="scroll-content-item ">12</div>
+	<div class="scroll-content-item ">13</div>
+	<div class="scroll-content-item ">14</div>
+	<div class="scroll-content-item ">15</div>
+	<div class="scroll-content-item ">16</div>
+	<div class="scroll-content-item ">17</div>
+	<div class="scroll-content-item ">18</div>
+	<div class="scroll-content-item ">19</div>
+	<div class="scroll-content-item ">20</div>
 </div>
 
 </div>
@@ -254,84 +306,33 @@ setTimeout( sizeScrollbar, 10 );//safari wants a timeout
 		<div id="logo"><a href="index.html"><img src="img/logo.jpg" width="150" height="150" border="0"></a></div>
 		<div id="sbi_container">
 
-
-			    <div class="sbi_panel">
-						<a href="index.html" class="sbi_label">HOME</a>
-						<div class="sbi_content">
-							<ul>
-								<li><a href="#">Sub&nbsp;Item1</a></li>
-								<li><a href="#">Sub&nbsp;Item2</a></li>
-								<li><a href="#">Sub&nbsp;Item3</a></li>
-							</ul>
-						</div>						
-	</div>
-					<div class="sbi_panel">
-						<a href="aboutus.html" class="sbi_label">ABOUT&nbsp;US</a>					
-					</div>
-                    <div class="sbi_panel">
-						<a href="creativity.html" class="sbi_label">OUR&nbsp;CREATIVITY</a>
-                    </div>
-                    
-
-                    <div class="sbi_panel">
-						<a href="contactus.html" class="sbi_label">CONTACT&nbsp;US</a>
-                    </div>
+			<div class="sbi_panel">
+				<a href="index.html" class="sbi_label">HOME</a>
+				<div class="sbi_content">
+					<ul>
+						<li><a href="#">Sub&nbsp;Item1</a></li>
+						<li><a href="#">Sub&nbsp;Item2</a></li>
+						<li><a href="#">Sub&nbsp;Item3</a></li>
+					</ul>
+				</div>						
+			</div>
+			<div class="sbi_panel">
+				<a href="aboutus.html" class="sbi_label">ABOUT&nbsp;US</a>					
+			</div>
+			<div class="sbi_panel">
+				<a href="creativity.html" class="sbi_label">OUR&nbsp;CREATIVITY</a>
+			</div>
 
 
-
-
-
+			<div class="sbi_panel">
+				<a href="contactus.html" class="sbi_label">CONTACT&nbsp;US</a>
+			</div>
 
   		</div>
         <div id="copy-right_bg">
 	    	<div id="copy-right">© Copyright 2013 Itan Jewels DMCC. All rights reserved.</div>
         </div>
 	</div>
-
-
-
-
-<div id="swiper_nav"style="position: absolute; bottom:295px; left:948px; display:none;">
-
-        <!-- Direction Navigator Skin Begin -->
-        <style>
-
-            .nav_up, .nav_down
-            {
-            	position: absolute;
-            	cursor: pointer;
-            	display: block;
-                background: url(img/jssor_arrows.png) no-repeat;
-                overflow:hidden;
-                opacity: .4; filter:alpha(opacity=40);
-				z-index:2000;
-            }
-            .nav_up { background-position: -5px -35px; }
-            .nav_down { background-position: -65px -35px; }
-            .nav_up:hover { background-position: -5px -35px; opacity: .8; filter:alpha(opacity=80); }
-            .nav_down:hover { background-position: -65px -35px; opacity: .8; filter:alpha(opacity=80); }
-        </style>
-        <!-- Arrow down -->
-        <span class="nav_up" style="width: 50px; height: 50px;  bottom: 0px; left: 45px; ;">
-        </span>
-		<!-- Arrow up -->
-        <span  class="nav_down" style="width: 50px; height: 50px; top: 0px; left: 45px;"></span>
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
 
 	<script type="text/javascript" src="js/jquery.bgImageMenu.js"></script>
 	<script type="text/javascript">
@@ -341,14 +342,13 @@ setTimeout( sizeScrollbar, 10 );//safari wants a timeout
 	</script>
 	<script src="js/idangerous.swiper-2.0.min.js"></script>
 	<script>
-  var mySwiper = new Swiper('.swiper-container',{
-	keyboardControl: true,
-	centeredSlides: true,
-	slidesPerView: 3,
-	watchActiveIndex: true,
-    mode: 'vertical'
-  });
-
+		var mySwiper = new Swiper('.swiper-container',{
+		keyboardControl: false,
+		centeredSlides: true,
+		slidesPerView: 3,
+		watchActiveIndex: true,
+		mode: 'vertical'
+		});
 
 		$('.nav_up').click(function(){
 			mySwiper.swipeNext();
@@ -357,14 +357,24 @@ setTimeout( sizeScrollbar, 10 );//safari wants a timeout
 		$('.nav_down').click(function(){
 			mySwiper.swipePrev();
 		});
-	  </script>
+
+
+		$(document).keydown(function(e) {
+			var code = (e.keyCode ? e.keyCode : e.which);
+			if (code == 40) {
+				mySwiper.swipePrev();
+			} else if (code == 38) {
+				mySwiper.swipeNext();
+			}
+		});
+	</script>
 
 
 	<script>
 	$(document).ready(function(){
 	  $(".scroll-content-item").click(function(){
-	   	$(".swiper-container").show();
-	   	$("#swiper_nav").show();
+	   	$(".swiper-container-outer").show();
+	   	$("#swiper_nav_outer").show();
 		var str_content = $(this).html();
 		$("#first-slide").html(str_content);
 		$("#second-slide").html(str_content);
