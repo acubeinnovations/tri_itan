@@ -2,12 +2,12 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="author" content="Made with ❤ by Jorge Epuñan - @csslab">
 	
-	<title>i-tan</title>
+	
+	<title>ITAN JEWELS - ABOUT US</title>
 	<link rel="stylesheet" href="css/aboutus.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="css/sbimenu.css" />
-	<script src="js/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>
 	<script src="js/jquery.timelinr-0.9.54.js"></script>
 		<script type="text/javascript" src="js/jquery.bgImageMenu.js"></script>
 	<script>
@@ -16,58 +16,102 @@
 				arrowKeys: 'true'
 			})
 		});
+		$(document).ready(function(){
+	
+		var logo_width=$('#logo').width();
+		var logo_height=$('#logo').height();
+		var arrow_width=$('#arrow_bg').width();
+		var arrow_height=$('#arrow_bg').height();
+		var window_height=$(document).height();
+		var window_width=$("#timeline").width();
+		var slide_width=window_width-(305);
+		var slide_hieght=window_height-(190)+9;
+		var h=slide_hieght;
+		$('#dates li a').css("height",slide_hieght);h=h+30;
+		$('#dates').css("height",h);
+		$('#dates li a').css("width",slide_width);
+		$('#dates').css("width",slide_width);
+		
+		
+		
+
+		$(window).resize(function(){
+		var logo_width=$('#logo').width();
+		var logo_height=$('#logo').height();
+		var arrow_width=$('#arrow_bg').width();
+		var arrow_height=$('#arrow_bg').height();
+		var window_height=$(document).height();
+		var window_width=$("#timeline").width();
+		var slide_width=window_width-(305);
+		var slide_hieght=window_height-(190)+9;
+		var h=slide_hieght;
+		$('#dates li a').css("height",slide_hieght);h=h+30;
+		$('#dates').css("height",h);
+		$('#dates li a').css("width",slide_width);
+		$('#dates').css("width",slide_width);
+		});
+		});
 	</script>
 </head>
 
 <body>
 	
-<p>&nbsp;</p>
-<div id="arrow_bg"><a href="#" id="next">+</a> <a href="#" name="prev" id="prev">-</a> </div>
 <div id="timeline">
-		<ul id="dates">
-			<li><a href="#1900">About&nbsp;us</a></li>
-			<li><a href="#1930">-Legacy</a></li>
-			<li><a href="#1944">-Our story</a></li>
-			<li><a href="#1950">-Our team</a></li>
-		</ul>
-  <ul id="issues">
-			<li id="001">&nbsp;</li>
-	 		<li id="002">&nbsp;</li>
-			<li id="003">&nbsp;</li>
-	 		<li id="004">&nbsp;</li>
-  </ul>
+
+    <ul id="dates">
+        <li><a href="#1900"><p>Lorem ipsum dolor sit amet, vitae lectus interdum, tincidunt nonummy sit a, varius in et etiam sagittis varius. Urna tempor sed sociosqu tortor donec feugiat, a cras, a eget laoreet maecenas porttitor nam, ullamcorper maecenas in, non pede odio. Sit odio potenti odio ultricies, in a, congue ante et leo vivamus tempus, non eos eum a etiam, sit massa similique ac. Vel at pulvinar consectetuer sit. Adipiscing ut, tellus ut libero, nunc dui elit elit vestibulum donec, venenatis ipsum laoreet suspendisse mi integer. Vestibulum nunc ut maecenas integer erat ut, ut iaculis posuere cras volutpat quis odio, massa tempor libero sem erat sodales vestibulum. Nascetur non etiam cras sem, lorem diam reiciendis ut, volutpat odio aliquam praesent, et lacinia massa, in vulputate elementum condimentum. Venenatis nibh facilisis enim, est fringilla molestie ante, amet elit. Sagittis dolor nibh sed luctus a nec, suscipit massa. </p></a></li>
+        <li><a href="#1930"><img src="img/gallery-2.jpg"></a></li>
+        <li><a href="#1944">1944</a></li>
+        <li><a href="#1950">1950</a></li>
+        <li><a href="#1971">1971</a></li>
+        <li><a href="#1977">1977</a></li>
+        <li><a href="#1989">1989</a></li>
+        <li><a href="#1999">1999</a></li>
+        <li><a href="#2001">2001</a></li>
+        <li><a href="#2011">2011</a></li>
+    </ul>
+    <ul id="issues">
+        <li id="001">&nbsp;</li>
+        <li id="002">&nbsp;</li>
+        <li id="003">&nbsp;</li>
+        <li id="004">&nbsp;</li>
+        <li id="005">&nbsp;</li>
+        <li id="006">&nbsp;</li>
+		<li id="007">&nbsp;</li>
+        <li id="008">&nbsp;</li>
+        <li id="009">&nbsp;</li>
+        <li id="010">&nbsp;</li>
 		
-        
-        
-        
+    </ul>
+</nav>
 </div>
-
+<div id="arrow_bg"><a href="#" id="next">+</a> <a href="#" id="prev">-</a> </div>
 <div class="content">
-               <div id="logo"><a href="index.htm"><img src="img/logo.jpg" width="150" height="150" border="0"></a></div>
-  <div id="sbi_container">
-			    <div class="sbi_panel">
-						<a href="index.html" class="sbi_label">HOME</a>	
-						<div class="sbi_content">
-							<ul>
-								<li><a href="#">Sub&nbsp;Item1</a></li>
-								<li><a href="#">Sub&nbsp;Item2</a></li>
-								<li><a href="#">Sub&nbsp;Item3</a></li>
-							</ul>
-						</div>				
-				</div>
+     <div id="logo"><a href="index.htm"><img src="img/logo.jpg" width="150" height="150" border="0"></a></div>
+ 	 <div id="sbi_container">
+  		<div class="sbi_panel">
+			<a href="index.html" class="sbi_label">HOME</a>	
+			<div class="sbi_content">
+				<ul>
+					<li><a href="#">Sub&nbsp;Item1</a></li>
+					<li><a href="#">Sub&nbsp;Item2</a></li>
+					<li><a href="#">Sub&nbsp;Item3</a></li>
+				</ul>
+			</div>	
+		</div>
 
-                    <div class="sbi_panel">
-						<a href="creativity.html" class="sbi_label">OUR&nbsp;CREATIVITY</a>
-                    </div>
+        <div class="sbi_panel">
+			<a href="creativity.html" class="sbi_label">OUR&nbsp;CREATIVITY</a>
+              </div>
                     
-                    <div class="sbi_panel">
-						<a href="products.html" class="sbi_label">OUR&nbsp;PRODUCTS</a>
-                    </div>
+        <div class="sbi_panel">
+			<a href="products.html" class="sbi_label">OUR&nbsp;PRODUCTS</a>
+         </div>
                     
-                    <div class="sbi_panel">
-						<a href="contactus.html" class="sbi_label">CONTACT&nbsp;US</a>
-                    </div>
-  </div>
+         <div class="sbi_panel">
+			<a href="contactus.html" class="sbi_label">CONTACT&nbsp;US</a>
+         </div>
+  	</div>
 </div>
 <div id="copy-right_bg">
 	<div id="copy-right">© Copyright 2013 Itan Jewels DMCC. All rights reserved.</div>

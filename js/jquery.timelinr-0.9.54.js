@@ -48,6 +48,7 @@ jQuery.fn.timelinr = function(options){
 		var widthDate = $(settings.datesDiv+' li').width();
 		var heightDate = $(settings.datesDiv+' li').height();
 		// set positions!
+		
 		if(settings.orientation == 'horizontal') {	
 			$(settings.issuesDiv).width(widthIssue*howManyIssues);
 			$(settings.datesDiv).width(widthDate*howManyDates).css('marginLeft',widthContainer/2-widthDate/2);
@@ -198,6 +199,7 @@ jQuery.fn.timelinr = function(options){
 			}
 			// prev/next buttons now disappears on first/last issue | bugfix from 0.9.51: lower than 1 issue hide the arrows
 			if(howManyDates == 1) {
+				
 				$(settings.prevButton+','+settings.nextButton).fadeOut('fast');
 			} else if(howManyDates == 2) {
 				if($(settings.issuesDiv+' li:first-child').hasClass(settings.issuesSelectedClass)) {
