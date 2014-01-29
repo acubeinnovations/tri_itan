@@ -136,3 +136,28 @@ width:160px;
 }
 
 
+
+
+
+.nav_up, .nav_down
+{
+	position: relative;
+	cursor: pointer;
+	display: block;
+    background: url(../img/jssor_arrows.png) no-repeat;
+    overflow:hidden;
+    opacity: .4; filter:alpha(opacity=40);
+	z-index:2000;
+}
+.nav_up { background-position: -5px -35px; }
+.nav_down { background-position: -65px -35px; }
+.nav_up:hover { background-position: -5px -35px; opacity: .8; filter:alpha(opacity=80); }
+.nav_down:hover { background-position: -65px -35px; opacity: .8; filter:alpha(opacity=80); }
+
+
+
+#swiper_nav{ 
+position:fixed;
+height:282px;width:50px; left:1128px; margin-top:182px;
+}
+
