@@ -51,7 +51,6 @@ html {
 	bottom: 0px;
 	background-image: url(../img/logo.jpg);
 	background-repeat: no-repeat;
-	z-index:4;
 }
 #copy-right_bg {
 	height: 32px;
@@ -66,7 +65,7 @@ html {
 	margin: 0px;
 	color: #505050;
 	font-size: 11px;
-	z-index:1;
+	z-index:-1;
 	font-family: "MuseoSans";
 	background-color: #c8c8c8;
 }
@@ -94,14 +93,12 @@ html {
 .sbi_panel{
 	float:left;
 	position:relative;
-	height:31px;
+	height:100%;
 	overflow:hidden;
 	width: 100%;
 	text-transform: capitalize;
 	left: 152px;
 	font-family: "MuseoSans";
-	margin-top:149px;
-	z-index:3;
 }
 .sbi_label{
 	display:block;
