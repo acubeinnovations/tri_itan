@@ -2,7 +2,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
 	
 	
 	<title>ITAN JEWELS - ABOUT US</title>
@@ -11,82 +11,15 @@
     <script src="js/jquery.min.js"></script>
 	<script src="js/jquery.timelinr-0.9.54.js"></script>
 	<script type="text/javascript" src="js/jquery.bgImageMenu.js"></script>
+	<script type="text/javascript" src="js/jquery.aboutus.responsive.js"></script>
+	
 	<script>
 		$(function(){
 			$().timelinr({
 				arrowKeys: 'true'
 			})
 		});
-		$(document).ready(function(){
-	
-		var logo_width=$('#logo').width();
-		var logo_height=$('#logo').height();
-		var arrow_width=$('#arrow_bg').width();
-		var arrow_height=$('#arrow_bg').height();
-		var window_height=$(document).height();
-		var window_width=$("#timeline").width();
-		var slide_width=window_width-(305);
-		var slide_hieght=window_height-(190)+9;
-		var h=slide_hieght;
-		$('#dates li a').css("height",slide_hieght);h=h+30;
-		$('#dates').css("height",h);
-		$('#dates li a').css("width",slide_width);
-		$('#dates').css("width",slide_width);
-		var slide_img_width=(slide_width*20)/100;
-		var slide_content_width=(slide_width*60)/100;
-		$('.slide-img-div').css("width",slide_img_width);
-		$('.slide-content-div').css("width",slide_content_width);
-		$('.slide-img-div').css("height",slide_hieght);
-		$('.slide-content-div').css("height",slide_hieght);
 		
-
-
-
-		$(window).resize(function(){
-		var logo_width=$('#logo').width();
-		var logo_height=$('#logo').height();
-		var arrow_width=$('#arrow_bg').width();
-		var arrow_height=$('#arrow_bg').height();
-		var window_height=$(document).height();
-		var window_width=$("#timeline").width();
-		var slide_width=window_width-(305);
-		var slide_hieght=window_height-(190)+9;
-		var h=slide_hieght;
-		$('#dates li a').css("height",slide_hieght);h=h+30;
-		$('#dates').css("height",h);
-		$('#dates li a').css("width",slide_width);
-		$('#dates').css("width",slide_width);
-		var slide_img_width=(slide_width*20)/100;
-		var slide_content_width=(slide_width*60)/100;
-		$('.slide-img-div').css("width",slide_img_width);
-		$('.slide-content-div').css("width",slide_content_width);
-		$('.slide-img-div').css("height",slide_hieght);
-		$('.slide-content-div').css("height",slide_hieght);
-		});
-
-
-		 $('html').bind('mousewheel', function (event, delta) {
-                window.parent.scrollBy(-120 * delta, 0);
-                return false;
-            });
-           
-            $(window).bind('mousewheel DOMMouseScroll', function (event) {
-               
-                if (event.ctrlKey == true) {
-                    event.preventDefault();
-                }
-            });
-            $(document).keydown(function (event) {
-					
-               if (event.ctrlKey == true || event.which == '17'){
-				
-										
-                 	event.preventDefault();
-
-             }			
-               
-           });
-		});
 	</script>
 </head>
 
@@ -95,8 +28,8 @@
 <div id="timeline">
 
     <ul id="dates">
-        <li><a href="#1900"><div class="slide-img-div"><img src="img/slide-gif.gif" width="350" height="370" border="0"></div><div class="slide-content-div"><span style="font-size:30px;">LOREM ISPUM</span><p>Lorem ipsum dolor sit amet, vitae lectus interdum, tincidunt nonummy sit a, varius in et etiam sagittis varius. Urna tempor sed sociosqu tortor donec feugiat, a cras, a eget laoreet maecenas porttitor nam, ullamcorper maecenas in, non pede odio. Sit odio potenti odio ultricies, in a, congue ante et leo vivamus tempus, non eos eum a etiam, sit massa similique ac. Vel at pulvinar consectetuer sit. Adipiscing ut, tellus ut libero, nunc dui elit elit vestibulum donec, venenatis ipsum laoreet suspendisse mi integer. Vestibulum nunc ut maecenas integer erat ut, ut iaculis posuere cras volutpat quis odio, massa tempor libero sem erat sodales vestibulum. Nascetur non etiam cras sem, lorem diam reiciendis ut, volutpat odio aliquam praesent, et lacinia massa, in vulputate elementum condimentum. Venenatis nibh facilisis enim, est fringilla molestie ante, amet elit. Sagittis dolor nibh sed luctus a nec, suscipit massa. </p></div></a></li>
-		<li><a href="#1930"><div class="slide-img-div"><img src="img/gallery-2.jpg" width="350" height="370" border="0"></div><div class="slide-content-div"><span style="font-size:30px;">LOREM ISPUM</span><p>Lorem ipsum dolor sit amet, vitae lectus interdum, tincidunt nonummy sit a, varius in et etiam sagittis varius. Urna tempor sed sociosqu tortor donec feugiat, a cras, a eget laoreet maecenas porttitor nam, ullamcorper maecenas in, non pede odio. Sit odio potenti odio ultricies, in a, congue ante et leo vivamus tempus, non eos eum a etiam, sit massa similique ac. Vel at pulvinar consectetuer sit. Adipiscing ut, tellus ut libero, nunc dui elit elit vestibulum donec, venenatis ipsum laoreet suspendisse mi integer. Vestibulum nunc ut maecenas integer erat ut, ut iaculis posuere cras volutpat quis odio, massa tempor libero sem erat sodales vestibulum. Nascetur non etiam cras sem, lorem diam reiciendis ut, volutpat odio aliquam praesent, et lacinia massa, in vulputate elementum condimentum. Venenatis nibh facilisis enim, est fringilla molestie ante, amet elit. Sagittis dolor nibh sed luctus a nec, suscipit massa. </p></div></a></li>
+        <li><a href="#1900"><div class="slide-img-div"><img class="slide-img" src="img/slide-gif.gif"  border="0"></div><div class="slide-content-div"><span class="slide-title" ">LOREM ISPUM</span><p class="slide-content">Lorem ipsum dolor sit amet, vitae lectus interdum, tincidunt nonummy sit a, varius in et etiam sagittis varius. Urna tempor sed sociosqu tortor donec feugiat, a cras, a eget laoreet maecenas porttitor nam, ullamcorper maecenas in, non pede odio. Sit odio potenti odio ultricies, in a, congue ante et leo vivamus tempus, non eos eum a etiam, sit massa similique ac. Vel at pulvinar consectetuer sit. Adipiscing ut, tellus ut libero, nunc dui elit elit vestibulum donec, venenatis ipsum laoreet suspendisse mi integer. Vestibulum nunc ut maecenas integer erat ut, ut iaculis posuere cras volutpat quis odio, massa tempor libero sem erat sodales vestibulum. Nascetur non etiam cras sem, lorem diam reiciendis ut, volutpat odio aliquam praesent, et lacinia massa, in vulputate elementum condimentum. Venenatis nibh facilisis enim, est fringilla molestie ante, amet elit. Sagittis dolor nibh sed luctus a nec, suscipit massa. </p></div></a></li>
+		<li><a href="#1930"><div class="slide-img-div"><img class="slide-img" src="img/gallery-2.jpg"  border="0"></div><div class="slide-content-div"><span class="slide-title" >LOREM ISPUM</span><p class="slide-content">Lorem ipsum dolor sit amet, vitae lectus interdum, tincidunt nonummy sit a, varius in et etiam sagittis varius. Urna tempor sed sociosqu tortor donec feugiat, a cras, a eget laoreet maecenas porttitor nam, ullamcorper maecenas in, non pede odio. Sit odio potenti odio ultricies, in a, congue ante et leo vivamus tempus, non eos eum a etiam, sit massa similique ac. Vel at pulvinar consectetuer sit. Adipiscing ut, tellus ut libero, nunc dui elit elit vestibulum donec, venenatis ipsum laoreet suspendisse mi integer. Vestibulum nunc ut maecenas integer erat ut, ut iaculis posuere cras volutpat quis odio, massa tempor libero sem erat sodales vestibulum. Nascetur non etiam cras sem, lorem diam reiciendis ut, volutpat odio aliquam praesent, et lacinia massa, in vulputate elementum condimentum. Venenatis nibh facilisis enim, est fringilla molestie ante, amet elit. Sagittis dolor nibh sed luctus a nec, suscipit massa. </p></div></a></li>
 
         <li><a href="#1944">1944</a></li>
         <li><a href="#1950">1950</a></li>
