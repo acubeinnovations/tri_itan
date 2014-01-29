@@ -5,8 +5,7 @@ $(function(){
 		slidesPerView: 4,
 		watchActiveIndex: true,
 		keyboardControl: true,
-		paginationClickable: true,
-		grabCursor: true
+		paginationClickable: true
 		
 	});
 
@@ -137,6 +136,10 @@ $(function(){
 		$('.swiper-pagination-switch').click(function(){
 			v_slide = $( ".swiper-active-switch" ).index()+1 ;
 		});
+		$('.swiper-active-switch').change(function(){
+			v_slide = $( ".swiper-active-switch" ).index()+1 ;
+		});
+
 });
 
 

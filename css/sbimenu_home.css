@@ -51,6 +51,7 @@ html {
 	bottom: 0px;
 	background-image: url(../img/logo.jpg);
 	background-repeat: no-repeat;
+	z-index:2	;
 }
 #copy-right_bg {
 	height: 32px;
@@ -65,7 +66,7 @@ html {
 	margin: 0px;
 	color: #505050;
 	font-size: 11px;
-	z-index:-1;
+	z-index:0;
 	font-family: "MuseoSans";
 	background-color: #c8c8c8;
 }
@@ -93,7 +94,8 @@ html {
 	width: 500;
 	left:0px;
 	height:31px;
-	bottom:-150px;
+	bottom:-149px;
+	z-index:1;
 }
 .sbi_panel{
 	float:left;
