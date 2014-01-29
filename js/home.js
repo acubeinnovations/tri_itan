@@ -11,7 +11,23 @@ $(function(){
 	});
 
 
-	var vertical = new Swiper('.swiper-vertical-container',{
+	var vertical1 = new Swiper('.swiper-vertical-container1',{
+		keyboardControl: true,
+		centeredSlides: true,
+		slidesPerView: 3,
+		watchActiveIndex: true,
+		mode: 'vertical'
+		});
+
+	var vertical2 = new Swiper('.swiper-vertical-container2',{
+		keyboardControl: true,
+		centeredSlides: true,
+		slidesPerView: 3,
+		watchActiveIndex: true,
+		mode: 'vertical'
+		});
+
+	var vertical3 = new Swiper('.swiper-vertical-container3',{
 		keyboardControl: true,
 		centeredSlides: true,
 		slidesPerView: 3,
@@ -29,4 +45,17 @@ $(function(){
 		mode: 'vertical'
 		});
 	
+		$(document).keydown(function(e) {
+			var code = (e.keyCode ? e.keyCode : e.which);
+			if (code == 37) {
+				horizontal_slide.swipePrev();
+			} else if (code == 39) {
+				horizontal_slide.swipeNext();
+			}
+		});
+
 });
+
+
+
+
