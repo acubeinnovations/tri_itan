@@ -1,42 +1,52 @@
 $(function(){
-	var horizontal_slide = $('.swiper-container').swiper({
+	var horizontal_slide = new Swiper('.swiper-container-horizontal',{
 		pagination:'.pagination',
 		centeredSlides: true,
 		slidesPerView: 4,
 		watchActiveIndex: true,
 		keyboardControl: true,
+		autoResize : false,	
+		speed : 500,	
 		paginationClickable: true
 		
 	});
 
 
-	var vertical1 = new Swiper('.swiper-vertical-container1',{
+	var vertical1 = new Swiper('.swiper-container-vertical-1',{
 		centeredSlides: true,
 		slidesPerView: 3,
 		watchActiveIndex: true,
+		autoResize : false,
+		speed : 500,	
 		mode: 'vertical'
 		});
 
-	var vertical2 = new Swiper('.swiper-vertical-container2',{
+	var vertical2 = new Swiper('.swiper-container-vertical-2',{
 		centeredSlides: true,
 		slidesPerView: 3,
 		watchActiveIndex: true,
+		autoResize : false,
+		speed : 500,	
 		mode: 'vertical'
 		});
 
-	var vertical3 = new Swiper('.swiper-vertical-container3',{
+	var vertical3 = new Swiper('.swiper-container-vertical-3',{
 		centeredSlides: true,
 		slidesPerView: 3,
 		watchActiveIndex: true,
+		autoResize : false,
+		speed : 500,	
 		mode: 'vertical'
 		});
 
 
 
-	var vertical4 = new Swiper('.swiper-vertical-container4',{
+	var vertical4 = new Swiper('.swiper-container-vertical-4',{
 		centeredSlides: true,
 		slidesPerView: 3,
 		watchActiveIndex: true,
+		autoResize : false,
+		speed: 500,	
 		mode: 'vertical'
 		});
 
@@ -139,6 +149,26 @@ $(function(){
 		$('.swiper-active-switch').change(function(){
 			v_slide = $( ".swiper-active-switch" ).index()+1 ;
 		});
+
+
+        if (document.cookie.indexOf("visited") >= 0) {
+            //Don't open any pop up here... You can do something here
+            //alert("Demo already shown");
+            //$("#keyboard_intro-home").hide();
+
+        }
+        else {
+            // set a new cookie..
+            var cookieExpiry = new Date();
+            cookieExpiry.setTime(cookieExpiry.getTime() + (8 * 3600 * 1000)); // 8 hours
+            document.cookie = "visited=yes; expires=" + cookieExpiry.toGMTString();
+            //alert("Show demo here");//Do here something...
+            $("#keyboard_intro-home").show();
+			$("#keyboard_intro-home").fadeIn('slow').delay(5000).hide(100);
+
+        }
+
+
 
 });
 

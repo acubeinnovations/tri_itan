@@ -5,64 +5,36 @@
 	<meta name="viewport" content="initial-scale=1">
 	<title>i-tan</title>
 
-	<link rel="stylesheet" href="css/idangerous.swiper.css">
+	<link rel="stylesheet" href="css/idangerous.swiper.home.css">
 	<link rel="stylesheet" href="css/home.css">
-
 	<meta charset="UTF-8" />
-
-<meta name="viewport" content="width=device-width;initial-scale=1.0; minimum-scale=1.0; maximum-scale=1.0;user-scalable=no">
-
-
 	<link rel="stylesheet" type="text/css" href="css/sbimenu.css" />
 	<script src="js/jquery.min.js"></script>
-	<script src="js/idangerous.swiper-2.0.min.js"></script>
+	<script src="js/idangerous.swiper.js"></script>
 	<script src="js/home.js"></script>
+	<script type="text/javascript" src="js/jquery.bgImageMenu.js"></script>
 
 </head>
 <body>
 
-		<img id="didacticiel-home" width="318" height="42" src="img/didacticiel-home.gif" style="position:fixed; bottom:495px; left:24%;"/>
-
-		<div id="pagination_outer">
-			<div id="pagination_inner">
-				<div class="pagination">
-				</div>
-			</div>
-
-
-			<div id="swiper_nav">
-					</style>
-					<!-- Arrow down -->
-					<span class="nav_up" style="width: 50px; height: 50px; ">
-					</span>
-					<!-- Arrow up -->
-					<span  class="nav_down" style="width: 50px; height: 50px; "></span>
-
-			</div>
-
-
-
-		</div>
-
-
-
-
-<div class="swiper-container-outer">
-
 
 	<div class="swiper-container swiper-container-horizontal">
+
+
+
 		<div class="swiper-wrapper swiper-wrapper-horizontal">
 
-			<div class="swiper-slide swiper-slide-horizontal">
+
+
+			<div class="swiper-slide swiper-slide-horizontal" >
 				<div class="inner">
 
 
 
 
 
-<div class="swiper-vertical-container-outer">
 
-	<div class="swiper-vertical-container1">
+	<div class="swiper-container  swiper-container-vertical-1">
 		<div class="swiper-wrapper ">
 
 			<div class="swiper-slide">
@@ -84,7 +56,6 @@
 		</div>
 
 	</div>
-</div>
 
 
 
@@ -104,9 +75,8 @@
 				<div class="inner">
 
 
-<div class="swiper-vertical-container-outer">
 
-	<div class="swiper-vertical-container2">
+	<div class="swiper-container swiper-container-vertical-2">
 		<div class="swiper-wrapper ">
 
 			<div class="swiper-slide">
@@ -128,7 +98,6 @@
 		</div>
 
 	</div>
-</div>
 
 
 
@@ -141,9 +110,8 @@
 				<div class="inner">
 
 
-<div class="swiper-vertical-container-outer">
 
-	<div class="swiper-vertical-container3">
+	<div class="swiper-container  swiper-container-vertical-3">
 		<div class="swiper-wrapper ">
 
 			<div class="swiper-slide">
@@ -165,7 +133,6 @@
 		</div>
 
 	</div>
-</div>
 
 
 
@@ -178,9 +145,8 @@
 				<div class="inner">
 
 
-<div class="swiper-vertical-container-outer">
 
-	<div class="swiper-vertical-container4">
+	<div class="swiper-container swiper-container-vertical-4">
 		<div class="swiper-wrapper ">
 
 			<div class="swiper-slide">
@@ -202,7 +168,6 @@
 		</div>
 
 	</div>
-</div>
 
 
 				</div>
@@ -212,7 +177,35 @@
 
 		</div>
 	</div>
+
+
+
+
+
+
+<div class="pagination-outer">		
+	<img id="keyboard_intro-home" width="318" height="42" src="img/keyboard_intro-home.gif"/>
+	<div class="pagination"></div>
 </div>
+
+
+<div class="pagination-vertical">
+	</style>
+	<!-- Arrow down -->
+	<span class="nav_up" style="width: 50px; height: 50px; ">
+	</span>
+	<!-- Arrow up -->
+	<span  class="nav_down" style="width: 50px; height: 50px; "></span>
+
+</div>
+
+
+
+
+
+
+
+
     <div class="content">
 		<div id="logo"><a href="index.html"><img src="img/logo.jpg" width="150" height="150" border="0"></a></div>
 		<div id="sbi_container">
@@ -244,7 +237,7 @@
 
     <!-- links -->
 
-		<script type="text/javascript" src="js/jquery.bgImageMenu.js"></script>
+
 		<script type="text/javascript">
 			$(function() {
 				$('#sbi_container').bgImageMenu();
@@ -255,22 +248,7 @@
 
  	<script type="text/javascript">
         $(function () {
-            if (document.cookie.indexOf("visited") >= 0) {
-                //Don't open any pop up here... You can do something here
-                //alert("Demo already shown");
-                $("#didacticiel-home").hide();
 
-            }
-            else {
-                // set a new cookie..
-                var cookieExpiry = new Date();
-                cookieExpiry.setTime(cookieExpiry.getTime() + (8 * 3600 * 1000)); // 8 hours
-                document.cookie = "visited=yes; expires=" + cookieExpiry.toGMTString();
-                //alert("Show demo here");//Do here something...
-                $("#didacticiel-home").show();
-				$("#didacticiel-home").fadeIn('slow').delay(5000).hide(100);
-
-            }
         });
     </script>
 
