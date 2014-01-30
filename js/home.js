@@ -6,7 +6,7 @@ $(function(){
 		watchActiveIndex: true,
 		keyboardControl: true,
 		autoResize : false,	
-		speed : 500,	
+		speed : 600,	
 		paginationClickable: true
 		
 	});
@@ -17,7 +17,7 @@ $(function(){
 		slidesPerView: 3,
 		watchActiveIndex: true,
 		autoResize : false,
-		speed : 500,	
+		speed : 600,	
 		mode: 'vertical'
 		});
 
@@ -26,7 +26,7 @@ $(function(){
 		slidesPerView: 3,
 		watchActiveIndex: true,
 		autoResize : false,
-		speed : 500,	
+		speed : 600,	
 		mode: 'vertical'
 		});
 
@@ -35,7 +35,7 @@ $(function(){
 		slidesPerView: 3,
 		watchActiveIndex: true,
 		autoResize : false,
-		speed : 500,	
+		speed : 600,	
 		mode: 'vertical'
 		});
 
@@ -46,7 +46,7 @@ $(function(){
 		slidesPerView: 3,
 		watchActiveIndex: true,
 		autoResize : false,
-		speed: 500,	
+		speed: 600,	
 		mode: 'vertical'
 		});
 
@@ -164,11 +164,13 @@ $(function(){
             document.cookie = "visited=yes; expires=" + cookieExpiry.toGMTString();
             //alert("Show demo here");//Do here something...
             $("#keyboard_intro-home").show();
-			$("#keyboard_intro-home").fadeIn('slow').delay(5000).hide(100);
+			$("#keyboard_intro-home").fadeIn('slow').delay(6000).hide(100);
 
         }
 
 
+
+	$(".swiper-slide-horizontal").removeAttr("style");
 
 });
 

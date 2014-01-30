@@ -176,7 +176,7 @@ var Swiper = function (selector, params) {
         //Slides Loader
         loader: {
             slides:[], //array with slides
-            slidesHTMLType:'outer', // or 'outer'
+            slidesHTMLType:'inner', // or 'outer'
             surroundGroups: 1, //keep preloaded slides groups around view
             logic: 'reload', //or 'change'
             loadAllSlides: false
