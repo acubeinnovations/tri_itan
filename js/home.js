@@ -171,34 +171,95 @@ $(function(){
         }
 
 
-
+	function change_slide_positions(){
 	//$(".swiper-slide-horizontal").removeAttr("style");
 	var outer_container = $("#swiper-container-horizontal");
-		oc_offset=outer_container.offset();
-		window_width = $( window ).width();
-		window_height = $( window ).height();
-		oc_top = -200;
-		oc_left = 0;
+	oc_offset=outer_container.offset();
+	window_width = $( window ).width();
+	window_height = $( window ).height();
+	oc_top = -200;
+	oc_left = 0;
 
 	//alert(window_width);
 	//alert(window_height);
 
+	if(window_width <= 1600){
+		oc_left = 0;
+	}
+	if(window_width <= 1366){
+		oc_left = -100;
+	}
+	if(window_width <= 1200){
+		oc_left = -300;
+	}
 	if(window_width <= 1024){
-		oc_top = -200;
-		oc_left = -250;
-	}
-	if(window_width <= 800){
-		oc_top = -250;
-		oc_left = -400;
-	}
-	if(window_width <= 400){
-		oc_top = -310;
-		oc_left = -450;
+		oc_left = -350;
 	}
 
+	if(window_width <= 800){
+		oc_left = -400;
+	}
+	
+	if(window_width <= 700){
+		oc_left = -430;
+	}
+	if(window_width <= 600){
+		oc_left = -450;
+	}
+	
+
+
+
+	if(window_height <= 768){
+		oc_top = -250;
+	}
+	if(window_height <= 760){
+		oc_top = -250;
+	}
+
+	if(window_height <= 700){
+		oc_top = -310;
+	}
+	if(window_height <= 640){
+		oc_top = -360;
+	}
+
+	if(window_height <= 623){
+		oc_top = -370;
+	}
+	if(window_height <= 600){
+		oc_top = -390;
+	}
+	
+	if(window_height <= 550){
+		oc_top = -400;
+	}
+	
+	//alert(oc_left);
+
+
 	outer_container.offset({ top: oc_top, left: oc_left });
+
+	}
 	
-	
+	change_slide_positions();
+
+
+var zoom = $( window ).width();;
+$(window).resize(function() {
+    var zoomNew = $( window ).width();
+
+    if (zoom != zoomNew) {
+//alert (zoom);
+//alert (zoomNew);
+		change_slide_positions();
+    }
+});
+
+
+
+
+
 });
 
 
