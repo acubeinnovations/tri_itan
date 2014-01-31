@@ -104,7 +104,7 @@ z-index:3;
     background: url(../img/jssor_arrows.png) no-repeat;
     overflow:hidden;
     opacity: .4; filter:alpha(opacity=40);
-	z-index:1;
+	z-index:5;
 	margin-bottom:1px;
 }
 .nav_up { background-position: 0px 0px; }
