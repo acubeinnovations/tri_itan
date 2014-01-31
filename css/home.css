@@ -26,7 +26,7 @@ body {
 .inner{
 	height: 1200px;
 	width: 400px;	
-	opacity: 0.2;
+	opacity: 0.1;
 }
 .swiper-slide-active .inner{
 	height: 1200px;
@@ -57,6 +57,7 @@ body {
 	opacity: 0.2;
 
 }
+
 .swiper-slide-active >.inner-vertical{
 	background-color: black;
 	opacity: 1;
@@ -65,24 +66,17 @@ body {
 
 
 
+#sbi_container{
+position:fixed;
+left: 0px;
+z-index:3;
+}
 
 
-#pagination_outer {
-	width:2284px !important;
-	height: 40px;
-	
-	position:fixed;
-	left:-450px;
-	top:42px;
-	z-index:20;
-}
-#pagination_inner {
-height:40px;width:571px;  margin-left:auto; margin-right:auto; 
-}
 .pagination {
-width:160px;
+	width:164px;
 	position:relative;
-	left:-160px;	
+	z-index:200;
 }
 .swiper-pagination-switch {
 	vertical-align: middle;
@@ -96,16 +90,11 @@ width:160px;
 	-ms-transition: 400ms;
 	-o-transition: 400ms;
 	transition: 400ms;
+	margin-right:1px;
 }
 .swiper-active-switch {
 	background: #fff;
 }
-
-
-
-
-
-
 
 .nav_up, .nav_down
 {
@@ -115,17 +104,27 @@ width:160px;
     background: url(../img/jssor_arrows.png) no-repeat;
     overflow:hidden;
     opacity: .4; filter:alpha(opacity=40);
-	z-index:2000;
+	z-index:1;
+	margin-bottom:1px;
 }
-.nav_up { background-position: -5px -35px; }
-.nav_down { background-position: -65px -35px; }
-.nav_up:hover { background-position: -5px -35px; opacity: .8; filter:alpha(opacity=80); }
-.nav_down:hover { background-position: -65px -35px; opacity: .8; filter:alpha(opacity=80); }
+.nav_up { background-position: 0px 0px; }
+.nav_down { background-position: -40px 0px; }
+.nav_up:hover { background-position: 0px 0px; opacity: .8; filter:alpha(opacity=80); }
+.nav_down:hover { background-position: -40px 0px; opacity: .8; filter:alpha(opacity=80); }
 
 
 
 #swiper_nav{ 
-position:fixed;
-height:282px;width:50px; left:979px; margin-top:282px;
+height:282px;width:50px; 
 }
 
+#keyboard-intro-home{
+z-index:30;
+}
+
+#copy-right_bg{
+	z-index:1;
+}
+#logo{
+	z-index:2;
+}

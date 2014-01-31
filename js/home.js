@@ -1,4 +1,5 @@
 $(function(){
+	var v_slide = 1;
 	var horizontal_slide = new Swiper('.swiper-container-horizontal',{
         calculateHeight: false,
         cssWidthAndHeight: true,
@@ -9,10 +10,16 @@ $(function(){
 		keyboardControl: true,
 		autoResize : false,	
 		speed : 600,	
-		paginationClickable: true
+		paginationClickable: true,
+		onSlideChangeEnd: function(swiper){
+		  v_slide =horizontal_slide.activeIndex + 1;
+		}
 		
 	});
 
+	horizontal_slide.addCallback('SlideChangeEnd', function(swiper){
+	  		v_slide =horizontal_slide.activeIndex + 1;
+	})  
 
 	var vertical1 = new Swiper('.swiper-container-vertical-1',{
 		centeredSlides: true,
@@ -52,22 +59,20 @@ $(function(){
 		mode: 'vertical'
 		});
 
-	var v_slide = 1;
+
+
+
 
 		$(document).keydown(function(e) {
 			var code = (e.keyCode ? e.keyCode : e.which);
 			if (code == 37) {
 				horizontal_slide.swipePrev();
-				if(v_slide >1 && v_slide <= 4){
-					v_slide =v_slide - 1;
-				}
+				v_slide =horizontal_slide.activeIndex + 1;
+				
 				
 			} else if (code == 39) {
 				horizontal_slide.swipeNext();
-				if(v_slide >=1 && v_slide < 4){
-					v_slide =v_slide + 1;
-				}
-				
+				v_slide =horizontal_slide.activeIndex + 1;
 			}else if (code == 40) {
 				switch(v_slide)
 				{
@@ -156,7 +161,7 @@ $(function(){
         if (document.cookie.indexOf("visited") >= 0) {
             //Don't open any pop up here... You can do something here
             //alert("Demo already shown");
-            //$("#keyboard_intro-home").hide();
+            $("#keyboard-intro-home").hide();
 
         }
         else {
@@ -165,40 +170,120 @@ $(function(){
             cookieExpiry.setTime(cookieExpiry.getTime() + (8 * 3600 * 1000)); // 8 hours
             document.cookie = "visited=yes; expires=" + cookieExpiry.toGMTString();
             //alert("Show demo here");//Do here something...
-            $("#keyboard_intro-home").show();
-			$("#keyboard_intro-home").fadeIn('slow').delay(6000).hide(100);
+            $("#keyboard-intro-home").show();
+			$("#keyboard-intro-home").fadeIn('slow').delay(6000).hide(100);
 
         }
 
 
-
+	function change_slide_positions(){
 	//$(".swiper-slide-horizontal").removeAttr("style");
 	var outer_container = $("#swiper-container-horizontal");
-		oc_offset=outer_container.offset();
-		window_width = $( window ).width();
-		window_height = $( window ).height();
-		oc_top = -200;
-		oc_left = 0;
+	oc_offset=outer_container.offset();
+
+	window_width = $( window ).width();
+	window_height = $( window ).height();
+	oc_top = 0;
+	oc_left = 0;
+	container_width = $("#swiper-container-horizontal").width();
+
+	var outer_pagination = $(".pagination");
+	op_offset=outer_pagination.offset();
+
+	var outer_pagination_vertical = $(".pagination-vertical");
+	opv_offset=outer_pagination_vertical.offset();
+
 
 	//alert(window_width);
 	//alert(window_height);
+	//alert(container_width);
 
-	if(window_width <= 1024){
-		oc_top = -200;
-		oc_left = -250;
+
+	if(window_width <= 1600){
+		oc_left = 0;
 	}
+	if(window_width <= 1366){
+		oc_left = -100;
+	}
+	if(window_width <= 1200){
+		oc_left = -300;
+	}
+	if(window_width <= 1024){
+		oc_left = -350;
+	}
+
 	if(window_width <= 800){
-		oc_top = -250;
 		oc_left = -400;
 	}
-	if(window_width <= 400){
-		oc_top = -310;
+	
+	if(window_width <= 700){
+		oc_left = -430;
+	}
+	if(window_width <= 600){
 		oc_left = -450;
 	}
+	
+
+	if(window_height <= 2000){
+		oc_top = -250;
+	}
+
+
+
+	if(window_height <= 700){
+		oc_top = -310;
+	}
+	if(window_height <= 640){
+		oc_top = -315;
+	}
+
+	if(window_height <= 623){
+		oc_top = -325;
+	}
+	if(window_height <= 600){
+		oc_top = -390;
+	}
+	
+	if(window_height <= 550){
+		oc_top = -400;
+	}
+	
+	//alert(oc_left);
+	//alert(oc_top);
+
 
 	outer_container.offset({ top: oc_top, left: oc_left });
+
+	var active_slide = $(".swiper-slide-active>.inner");
+	as_offset = active_slide.offset();
+	var keyboard_intro = $("#keyboard-intro-home");
+	kb_intro_offset = keyboard_intro.offset();
+
+	outer_pagination.offset({ top: oc_top+400, left: as_offset.left-163 });
+	outer_pagination_vertical.offset({ top: oc_top+838, left: as_offset.left+400 });
+
+	keyboard_intro.offset({ top: oc_top+400, left: as_offset.left-163 });
+
+	}
 	
-	
+	change_slide_positions();
+
+
+var zoom = $( window ).width();;
+$(window).resize(function() {
+    var zoomNew = $( window ).width();
+
+    if (zoom != zoomNew) {
+//alert (zoom);
+//alert (zoomNew);
+		change_slide_positions();
+    }
+});
+
+
+
+
+
 });
 
 

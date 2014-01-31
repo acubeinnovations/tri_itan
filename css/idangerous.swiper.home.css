@@ -11,7 +11,7 @@ Basic Swiper Styles
 	-o-backface-visibility:hidden;
 	backface-visibility:hidden;
 	/* Fix of Webkit flickering */
-	z-index:-2;
+	z-index:0;
 }
 .swiper-wrapper {
 	position:relative;
