@@ -27,6 +27,7 @@
 	width: 450px;
 	color: #FFFFFF;
 }
+
 #title1 {
 	font-family: "MuseoSans-100";
 	font-size: 25px;
@@ -65,9 +66,16 @@
 	cursor:pointer;
 }
 hr.style-six { border: 0; height: 0; border-top: 1px solid rgba(0, 0, 0, 0.1); border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
-
+#title_head {
+	font-family: "MuseoSans-100";
+	font-size: 14px;
+	text-transform: uppercase;
+	margin-top:30px;
+	width:100%;
+	color:#FFFFFF;
+}
 .address{
-	color:#ccc;
+	color:#999999;
 	width:40%;
 	float:left;
 	padding: 70px 0px 0px 30px;

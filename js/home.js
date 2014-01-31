@@ -259,10 +259,10 @@ $(function(){
 	var keyboard_intro = $("#keyboard-intro-home");
 	kb_intro_offset = keyboard_intro.offset();
 
-	outer_pagination.offset({ top: oc_top+400, left: as_offset.left-160 });
+	outer_pagination.offset({ top: oc_top+400, left: as_offset.left-163 });
 	outer_pagination_vertical.offset({ top: oc_top+838, left: as_offset.left+400 });
 
-	keyboard_intro.offset({ top: oc_top+400, left: as_offset.left-160 });
+	keyboard_intro.offset({ top: oc_top+400, left: as_offset.left-163 });
 
 	}
 	

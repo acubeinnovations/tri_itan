@@ -69,16 +69,12 @@ body {
 #sbi_container{
 position:fixed;
 left: 0px;
+z-index:3;
 }
 
 
-
-
-
-
-
 .pagination {
-	width:160px;
+	width:164px;
 	position:relative;
 	z-index:200;
 }
@@ -94,16 +90,11 @@ left: 0px;
 	-ms-transition: 400ms;
 	-o-transition: 400ms;
 	transition: 400ms;
+	margin-right:1px;
 }
 .swiper-active-switch {
 	background: #fff;
 }
-
-
-
-
-
-
 
 .nav_up, .nav_down
 {
@@ -114,11 +105,12 @@ left: 0px;
     overflow:hidden;
     opacity: .4; filter:alpha(opacity=40);
 	z-index:1;
+	margin-bottom:1px;
 }
-.nav_up { background-position: -5px -35px; }
-.nav_down { background-position: -65px -35px; }
-.nav_up:hover { background-position: -5px -35px; opacity: .8; filter:alpha(opacity=80); }
-.nav_down:hover { background-position: -65px -35px; opacity: .8; filter:alpha(opacity=80); }
+.nav_up { background-position: 0px 0px; }
+.nav_down { background-position: -40px 0px; }
+.nav_up:hover { background-position: 0px 0px; opacity: .8; filter:alpha(opacity=80); }
+.nav_down:hover { background-position: -40px 0px; opacity: .8; filter:alpha(opacity=80); }
 
 
 
@@ -130,4 +122,9 @@ height:282px;width:50px;
 z-index:30;
 }
 
-
+#copy-right_bg{
+	z-index:1;
+}
+#logo{
+	z-index:2;
+}
