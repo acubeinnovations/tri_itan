@@ -9,40 +9,43 @@ body {
 
 
 .swiper-container-horizontal {
+	position:fixed;
 	height: 100%;
+	min-height:1200px;
 	width: 100%;
+	min-width:1600px;
 }
 
 .swiper-slide-horizontal{
-	height: 900px;
-	width: 300px;
+	height: 1200px;
+	width: 400px;
 }
 
 
 
 .inner{
-	height: 900px;
-	width: 300px;	
+	height: 1200px;
+	width: 400px;	
 	opacity: 0.2;
 }
 .swiper-slide-active .inner{
-	height: 900px;
-	width: 300px;
+	height: 1200px;
+	width: 400px;
 	opacity: 1;
 
 }
 
 
 .swiper-container-vertical {
-	height: 900px;
-	width: 300px;
+	height: 1200px;
+	width: 400px;
 }
 
 
 
 .inner-vertical{
-	height: 300px;
-	width: 300px;
+	height: 400px;
+	width: 400px;
 	color:#fff;
 	line-height:200px;
 	text-align:center;
@@ -88,11 +91,11 @@ width:160px;
 	height: 40px;
 	background: #000;
 	cursor: pointer;
-	-webkit-transition: 300ms;
-	-moz-transition: 300ms;
-	-ms-transition: 300ms;
-	-o-transition: 300ms;
-	transition: 300ms;
+	-webkit-transition: 400ms;
+	-moz-transition: 400ms;
+	-ms-transition: 400ms;
+	-o-transition: 400ms;
+	transition: 400ms;
 }
 .swiper-active-switch {
 	background: #fff;

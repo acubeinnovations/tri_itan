@@ -1,5 +1,7 @@
 $(function(){
 	var horizontal_slide = new Swiper('.swiper-container-horizontal',{
+        calculateHeight: false,
+        cssWidthAndHeight: true,
 		pagination:'.pagination',
 		centeredSlides: true,
 		slidesPerView: 4,
@@ -170,8 +172,33 @@ $(function(){
 
 
 
-	$(".swiper-slide-horizontal").removeAttr("style");
+	//$(".swiper-slide-horizontal").removeAttr("style");
+	var outer_container = $("#swiper-container-horizontal");
+		oc_offset=outer_container.offset();
+		window_width = $( window ).width();
+		window_height = $( window ).height();
+		oc_top = -200;
+		oc_left = 0;
 
+	//alert(window_width);
+	//alert(window_height);
+
+	if(window_width <= 1024){
+		oc_top = -200;
+		oc_left = -250;
+	}
+	if(window_width <= 800){
+		oc_top = -250;
+		oc_left = -400;
+	}
+	if(window_width <= 400){
+		oc_top = -310;
+		oc_left = -450;
+	}
+
+	outer_container.offset({ top: oc_top, left: oc_left });
+	
+	
 });
 
 
