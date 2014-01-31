@@ -26,7 +26,7 @@ body {
 .inner{
 	height: 1200px;
 	width: 400px;	
-	opacity: 0.2;
+	opacity: 0.1;
 }
 .swiper-slide-active .inner{
 	height: 1200px;
@@ -57,6 +57,7 @@ body {
 	opacity: 0.2;
 
 }
+
 .swiper-slide-active >.inner-vertical{
 	background-color: black;
 	opacity: 1;
@@ -74,22 +75,12 @@ left: 0px;
 
 
 
-#pagination_outer {
-	width:2284px !important;
-	height: 40px;
-	
-	position:fixed;
-	left:-450px;
-	top:42px;
-	z-index:20;
-}
-#pagination_inner {
-height:40px;width:571px;  margin-left:auto; margin-right:auto; 
-}
+
+
 .pagination {
-width:160px;
+	width:160px;
 	position:relative;
-	left:-160px;	
+	z-index:200;
 }
 .swiper-pagination-switch {
 	vertical-align: middle;
@@ -122,7 +113,7 @@ width:160px;
     background: url(../img/jssor_arrows.png) no-repeat;
     overflow:hidden;
     opacity: .4; filter:alpha(opacity=40);
-	z-index:2000;
+	z-index:1;
 }
 .nav_up { background-position: -5px -35px; }
 .nav_down { background-position: -65px -35px; }
@@ -132,9 +123,11 @@ width:160px;
 
 
 #swiper_nav{ 
-position:fixed;
-height:282px;width:50px; left:979px; margin-top:282px;
+height:282px;width:50px; 
 }
 
+#keyboard-intro-home{
+z-index:30;
+}
 
 
