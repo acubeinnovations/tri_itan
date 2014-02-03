@@ -26,7 +26,8 @@ $('.swiper-container').css("height",container_height);
 $('.swiper-container').css("left",0);
 
 //slide content and img
-		slide_hieght=window_height_ipad-30;
+		slide_hieght=container_height;
+		slide_hieght=slide_hieght-30;
 		slide_width=window_width_ipad;
 		var slide_img_width=(slide_width*30)/100;
 		var slide_content_width=(slide_width*60)/100;
@@ -62,7 +63,8 @@ $('.swiper-container').css("height",container_height);
 $('.inner-horizontal').css("width",container_width);
 
 //slide content and img
-		slide_hieght=container_height-30;
+		slide_hieght=container_height;
+		slide_hieght=slide_hieght-30;
 		slide_width=container_width;
 		var slide_img_width=(slide_width*30)/100;
 		var slide_content_width=(slide_width*60)/100;
