@@ -9,8 +9,14 @@ $(document).ready(function(){
 		$('.address').css("padding-left",15);
 		$('.address').css("padding-right",10);
 		}else{
+		if (window_width=='1024' && window_height=='768')
+		{
 		var appDiv1_width=(window_width*70)/100;
 		var appDiv1_height=(window_height*45)/100;
+		}else{
+		var appDiv1_width=(window_width*70)/100;
+		var appDiv1_height=(window_height*50)/100;
+		}
 		}
 		var contact_box_1_width=(appDiv1_width*50)/100;
 		var contact_box_1_height=appDiv1_height;
