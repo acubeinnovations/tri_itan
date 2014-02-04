@@ -213,7 +213,7 @@ $(function(){
 		oc_left = -300;
 	}
 	if(window_width <= 1024){
-		oc_left = -300;
+		oc_left = -280;
 	}
 
 	if(window_width <= 800){
