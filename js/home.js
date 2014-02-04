@@ -1,8 +1,10 @@
 $(function(){
+
 	var v_slide = 1;
+
 	var horizontal_slide = new Swiper('.swiper-container-horizontal',{
         calculateHeight: false,
-        cssWidthAndHeight: true,
+        cssWidthAndHeight: false,
 		pagination:'.pagination',
 		centeredSlides: true,
 		slidesPerView: 4,
@@ -10,16 +12,11 @@ $(function(){
 		keyboardControl: true,
 		autoResize : false,	
 		speed : 600,	
-		paginationClickable: true,
-		onSlideChangeEnd: function(swiper){
-		  v_slide =horizontal_slide.activeIndex + 1;
-		}
+		paginationClickable: true
 		
 	});
 
-	horizontal_slide.addCallback('SlideChangeEnd', function(swiper){
-	  		v_slide =horizontal_slide.activeIndex + 1;
-	})  
+
 
 	var vertical1 = new Swiper('.swiper-container-vertical-1',{
 		centeredSlides: true,
@@ -58,6 +55,9 @@ $(function(){
 		speed: 600,	
 		mode: 'vertical'
 		});
+
+
+
 
 
 
@@ -150,6 +150,7 @@ $(function(){
 		});
 
 
+
 		$('.swiper-pagination-switch').click(function(){
 			v_slide = $( ".swiper-active-switch" ).index()+1 ;
 		});
@@ -176,6 +177,7 @@ $(function(){
         }
 
 
+
 	function change_slide_positions(){
 	//$(".swiper-slide-horizontal").removeAttr("style");
 	var outer_container = $("#swiper-container-horizontal");
@@ -198,7 +200,9 @@ $(function(){
 	//alert(window_height);
 	//alert(container_width);
 
-
+	if(window_width <= 2560){
+		oc_left = 400;
+	}
 	if(window_width <= 1600){
 		oc_left = 0;
 	}
@@ -209,7 +213,7 @@ $(function(){
 		oc_left = -300;
 	}
 	if(window_width <= 1024){
-		oc_left = -350;
+		oc_left = -300;
 	}
 
 	if(window_width <= 800){
@@ -259,26 +263,44 @@ $(function(){
 	var keyboard_intro = $("#keyboard-intro-home");
 	kb_intro_offset = keyboard_intro.offset();
 
-	outer_pagination.offset({ top: oc_top+400, left: as_offset.left-163 });
-	outer_pagination_vertical.offset({ top: oc_top+838, left: as_offset.left+400 });
+	outer_pagination.offset({ top: oc_top+360, left: as_offset.left-163 });
+	outer_pagination_vertical.offset({ top: oc_top+800, left: as_offset.left+400 });
 
-	keyboard_intro.offset({ top: oc_top+400, left: as_offset.left-163 });
+	keyboard_intro.offset({ top: oc_top+360, left: as_offset.left-163 });
 
 	}
 	
 	change_slide_positions();
 
 
-var zoom = $( window ).width();;
-$(window).resize(function() {
-    var zoomNew = $( window ).width();
 
-    if (zoom != zoomNew) {
-//alert (zoom);
-//alert (zoomNew);
-		change_slide_positions();
-    }
-});
+
+	var zoom = $( window ).width();
+	$(window).resize(function() {
+		var zoomNew = $( window ).width();
+
+		if (zoom != zoomNew) {
+			//alert (zoom);
+			//alert (zoomNew);
+			change_slide_positions();
+		}
+	});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
