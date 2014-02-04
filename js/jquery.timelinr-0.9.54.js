@@ -111,40 +111,41 @@ jQuery.fn.timelinr = function(options){
 //slide with mouse drag-start-added by nijo
 	
 			var xPrev = 0;
-			function handleMouseDown(e, sbar){
+			function handleMouseDown(e, div_slide_this){
 			if (e.button == 0){
 			var page_pos=e.pageX;
-			$(sbar).bind('mousemove', function(event){
+			$(div_slide_this).bind('mousemove', function(event){
 					page=event.pageX;
-				    handleMouseMove(event, sbar, page,page_pos);
+				    handleMouseMove(event, div_slide_this, page,page_pos);
 				});
 				}
 			}	
 
-			function handleMouseUp(e, sbar){
-				$(sbar).unbind('mousemove');       
+			function handleMouseUp(e, div_slide_this){
+				$(div_slide_this).unbind('mousemove');       
 			}
 
-			function handleMouseMove(e, sbar,page,page_pos){
-				// not sure it this will work yet, but unimportant
+			function handleMouseMove(e, div_slide_this,page,page_pos){
+				e.preventDefault();
+                
 			   if(page_pos< page){ prevSlide(e); }else{nextSlide(e);}
-					 	 $(sbar).unbind('mousemove');   
+					 	 $(div_slide_this).unbind('mousemove');   
 		
 			}
 
 
 
-			var statusbar = $("#dates");
+			var div_slide_id = $("#dates");
 
-			statusbar.mousedown(function(event){
+			div_slide_id.mousedown(function(event){
 				handleMouseDown(event, this);
 			});
 
-			statusbar.mouseup(function(event){
+			div_slide_id.mouseup(function(event){
 				handleMouseUp(event, this);
 			});
-
-
+		
+		$("#dates").on('dragstart', function(event) { $('.slide-link').draggable( "destroy" );});
 function nextSlide(e){
 	//e.preventDefault();
 			// bugixed from 0.9.54: now the dates gets centered when there's too much dates.
