@@ -14,7 +14,7 @@
 	height:450px;
 	z-index:2;
 	right: 0px;
-	bottom: 100px;
+	bottom: 150px;
 	background-color: #FFFFFF;
 	overflow: hidden;
 }
@@ -78,7 +78,7 @@ hr.style-six { border: 0; height: 0; border-top: 1px solid rgba(0, 0, 0, 0.1); b
 	color:#999999;
 	width:40%;
 	float:left;
-	padding: 70px 0px 0px 30px;
+	padding: 50px 0px 0px 20px;
 	font-size:14px;
 	font-family: "MuseoSans-100";
 }
@@ -102,4 +102,5 @@ padding-top:5px;
 padding-bottom:5px;
 padding-left:5px;
 background-color:#e5e5e5;
-border-style:none;}
+border-style:none;
+}
