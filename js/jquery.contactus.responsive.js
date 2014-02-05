@@ -3,19 +3,25 @@ $(document).ready(function(){
 	function responsive(){
 		var window_width=$(window).width();
 		var window_height=$(window).height();
-		if(window_width<='857'){
+		if(window_width<='1023'){
 		var appDiv1_width=(window_width*75)/100;
 		var appDiv1_height=(window_height*42)/100;
 		$('.address').css("padding-left",15);
 		$('.address').css("padding-right",10);
+		}else{
+		if (window_width>'1024' && window_width<'1330')
+		{
+		var appDiv1_width=(window_width*65)/100;
+		var appDiv1_height=(window_height*45)/100;
 		}else{
 		if (window_width=='1024' && window_height=='768')
 		{
 		var appDiv1_width=(window_width*70)/100;
 		var appDiv1_height=(window_height*45)/100;
 		}else{
-		var appDiv1_width=(window_width*70)/100;
-		var appDiv1_height=(window_height*50)/100;
+		var appDiv1_width=(window_width*60)/100;
+		var appDiv1_height=(window_height*55)/100;
+		}
 		}
 		}
 		var contact_box_1_width=(appDiv1_width*50)/100;
